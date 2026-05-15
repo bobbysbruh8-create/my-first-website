@@ -1,43 +1,43 @@
-const display = document.getElementById('display');
-const buttons = document.querySelectorAll('.btn');
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll("button");
 
-let currentInput = '';
-let resultDisplayed = false;
+let input = "";
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const number = button.dataset.number;
-    const action = button.dataset.action;
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const num = btn.dataset.number;
+    const action = btn.dataset.action;
 
-    if (number !== undefined) {
-      if (resultDisplayed) {
-        currentInput = '';
-        resultDisplayed = false;
-      }
-      currentInput += number;
-      display.textContent = currentInput;
+    if (num !== undefined) {
+      if (input === "0") input = "";
+      input += num;
+      display.textContent = input;
     }
 
     if (action !== undefined) {
-      if (action === 'clear') {
-        currentInput = '';
-        display.textContent = '0';
-      } else if (action === 'delete') {
-        currentInput = currentInput.slice(0, -1);
-        display.textContent = currentInput || '0';
-      } else if (action === '=') {
+      if (action === "clear") {
+        input = "";
+        display.textContent = "0";
+      }
+
+      else if (action === "delete") {
+        input = input.slice(0, -1);
+        display.textContent = input || "0";
+      }
+
+      else if (action === "=") {
         try {
-          currentInput = eval(currentInput).toString();
-          display.textContent = currentInput;
-          resultDisplayed = true;
+          input = eval(input).toString();
+          display.textContent = input;
         } catch {
-          display.textContent = 'Error';
-          currentInput = '';
+          display.textContent = "Error";
+          input = "";
         }
-      } else {
-        if (resultDisplayed) resultDisplayed = false;
-        currentInput += action;
-        display.textContent = currentInput;
+      }
+
+      else {
+        input += action;
+        display.textContent = input;
       }
     }
   });
