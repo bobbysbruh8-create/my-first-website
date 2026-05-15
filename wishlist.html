@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PricePilot</title>
+  <title>Wishlist</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,18 +18,15 @@
 </header>
 
 <section class="hero">
-  <h1>Find the cheapest groceries instantly</h1>
-
-  <div class="search-box">
-    <input id="search" placeholder="milk, bread, eggs..." />
-    <button onclick="searchProduct()">Search</button>
-  </div>
+  <h1>Your Wishlist ❤️</h1>
 </section>
 
-<section class="results-container">
-  <div id="results"></div>
-</section>
+<div class="results-container" id="wishlist"></div>
 
 <script src="app.js"></script>
+<script>
+loadWishlist();
+</script>
+
 </body>
 </html>
