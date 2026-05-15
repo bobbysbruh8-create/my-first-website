@@ -2,20 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Price Compare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartPrice Compare</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>🛒 Supermarket Price Compare</h1>
-    <p>Type a product: milk or bread</p>
+  <header class="header">
+    <h1>🛒 SmartPrice</h1>
+    <p>Compare supermarket prices instantly</p>
+  </header>
 
-    <input id="search" placeholder="Search product...">
-    <button onclick="searchProduct()">Search</button>
+  <main class="container">
 
-    <div id="results"></div>
-  </div>
+    <div class="search-box">
+      <input id="search" type="text" placeholder="Search product (milk, bread, eggs...)">
+      <button onclick="searchProduct()">Compare</button>
+    </div>
+
+    <div id="results" class="results"></div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Built by killons 🚀 | Demo price comparison tool</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
