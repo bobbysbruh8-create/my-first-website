@@ -3,29 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartPrice Compare</title>
+  <title>PricePilot</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header">
-    <h1>🛒 SmartPrice</h1>
-    <p>Compare supermarket prices instantly</p>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="logo">PricePilot</div>
+    <div class="nav-links">
+      <a href="#">How it works</a>
+      <a href="#">Stores</a>
+      <a href="#">About</a>
+    </div>
   </header>
 
-  <main class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Find the cheapest groceries in seconds</h1>
+    <p>Compare real supermarket prices across UK stores in one place.</p>
 
     <div class="search-box">
-      <input id="search" type="text" placeholder="Search product (milk, bread, eggs...)">
+      <input id="search" placeholder="Try: milk, bread, eggs..." />
       <button onclick="searchProduct()">Compare</button>
     </div>
 
+    <div class="hint">
+      Trusted price comparisons across major supermarkets
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results-container">
     <div id="results" class="results"></div>
+  </section>
 
-  </main>
-
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>Built by killons 🚀 | Demo price comparison tool</p>
+    <p>© 2026 PricePilot — built for learning</p>
   </footer>
 
   <script src="script.js"></script>

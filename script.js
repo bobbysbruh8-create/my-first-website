@@ -26,7 +26,11 @@ function searchProduct() {
   results.innerHTML = "";
 
   if (!data[input]) {
-    results.innerHTML = `<p>No results found for "<b>${input}</b>"</p>`;
+    results.innerHTML = `
+      <div class="card">
+        <span>No results found for "${input}"</span>
+      </div>
+    `;
     return;
   }
 
